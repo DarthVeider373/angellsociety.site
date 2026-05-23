@@ -12,9 +12,19 @@
     
     <!-- Critical CSS inline -->
     <style>
-        /* Adicionar aqui os estilos críticos */
-        .header, .container, .footer { width: 100%; }
-        .video-container { position: relative; width: 100%; }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        .header, .container, .footer {
+            width: 100%;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+        }
+
         body {
             background-image: url('images/bg_1.webp');
             background-attachment: fixed;
@@ -24,7 +34,9 @@
             min-height: 100vh;
             margin: 0;
             padding: 0;
+            font-family: Poppins, Arial, sans-serif;
         }
+
         @media (max-width: 768px) {
             body {
                 background-attachment: scroll;
@@ -33,6 +45,7 @@
                 background-repeat: no-repeat;
             }
         }
+
         @media (max-width: 480px) {
             body {
                 background-size: 130% auto;
@@ -61,29 +74,24 @@
     <link rel="dns-prefetch" href="https://license.vturb.com">
     <!-- /VELOCIDADE -->
 
-<script>
-  window.googlePixelId = "6a08f04f5b5c4ce4887ab26b";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-google.js");
-  document.head.appendChild(a);
-</script>
+    <!-- UTMIFY GOOGLE PIXEL -->
+    <script>
+        window.googlePixelId = "6a08f04f5b5c4ce4887ab26b";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-google.js");
+        document.head.appendChild(a);
+    </script>
 
-<script
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  data-utmify-prevent-xcod-sck
-  data-utmify-prevent-subids
-  async
-  defer
-></script>
-
-    
-    <script async defer src="js/pixel-google.js"></script>
-
-    <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async defer></script>
-
-    <script src="js/player.js" async></script>
+    <!-- UTMIFY UTMS -->
+    <script
+        src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+        data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids
+        async
+        defer
+    ></script>
 </head>
 
 <body>
@@ -128,12 +136,10 @@
     <!-- VIDEO -->
     <div class="video-container">
         <div id="area-video" style="margin: 0 auto; width: 100%; max-width: 400px;">
-            <vturb-smartplayer id="ab-6a08eebf07a4624290ebbc83" style="display: block; margin: 0 auto; width: 100%;"></vturb-smartplayer>
+            <vturb-smartplayer id="ab-6a08eebf07a4624290ebbc83" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> 
             <script type="text/javascript">
-                var s = document.createElement("script");
-                s.src = "https://scripts.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/ab-test/6a08eebf07a4624290ebbc83/player.js";
-                s.async = true;
-                document.head.appendChild(s);
+                var s=document.createElement("script");
+                s.src="https://scripts.converteai.net/cda0fd17-3b99-44d2-a83a-fc66435cb2df/ab-test/6a08eebf07a4624290ebbc83/player.js", s.async=!0,document.head.appendChild(s);
             </script>
         </div>
     </div>
